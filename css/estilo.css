@@ -78,6 +78,9 @@ section#home .carousel-caption{
 
 /* Section Conteudo
 *****************************/
+#conteudo .caixa img{
+    width: 230px;
+}
 #conteudo p{
     text-align: justify;
     letter-spacing: .07em;
