@@ -1,0 +1,17 @@
+:root{
+    --title-primary: rgb(53, 53, 50);
+    --text-color-hover: rgb(238, 89, 21);
+    --text-color-light: #fff;
+    --bg-menu-footer: rgba(0, 0, 0, 0.7);
+}
+
+html,body,#home{
+   font-family:  -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+
+}
+body{
+    background: url(../imagens/capatransp.png) ,
+    url(../imagens/ruido2.png),
+    linear-gradient(50deg,#d82121fd,#305f8d);
+    background-attachment: fixed;
+}
