@@ -1,0 +1,271 @@
+:root{
+    --title-primary: rgb(53, 53, 50);
+    --text-color-hover: rgb(238, 89, 21);
+    --text-color-light: #fff;
+    --bg-menu-footer: rgba(0, 0, 0, 0.7);
+}
+
+html,body,#home{
+   font-family:  -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+
+}
+body{
+    background: url(../imagens/capatransp.png) ,
+    url(../imagens/ruido2.png),
+    linear-gradient(50deg,#d82121fd,#305f8d);
+    background-attachment: fixed;
+}
+
+
+/* Configuração Cabeçalho
+*------------------------*/
+
+header nav li a{
+    color: var(--text-color-light);
+    font-weight: 600;
+    margin-left: 10px;
+    display: block;
+}
+header nav li a:hover{
+    color: var(--text-color-hover);
+}
+header nav li a{
+    position: relative;
+    overflow: hidden;
+}
+header nav li{
+    /* overflow: hidden; */
+}
+
+header nav li a::after{
+    content: "";
+    width: 100%;
+    height: 3px;
+    background: white;
+    position: absolute;
+    bottom: 0;
+    left:0 ;
+    transform: translateX(-103%);
+    transition: .8s;
+}
+header nav li a:hover::after{
+    transform: translateX(103%);
+}
+
+.transparente{
+    background:var(--bg-menu-footer);
+}
+header nav button i{
+    color: white;
+    border: 1px solid white;
+    padding: 5px 12px;
+    border-radius: 20%;
+    font-size: 32px;
+}
+
+
+/* Section HOME / Carrosel
+-------------------------------------- */
+.capa{
+    text-align: center;
+}
+
+section#home .carousel-caption{
+    background:var(--bg-dark-opacity);
+}
+
+
+
+/* Section Conteudo
+*****************************/
+#conteudo p{
+    text-align: justify;
+    letter-spacing: .07em;
+    font-weight: 400;
+    line-height: 1.5rem;
+    font-size: 1.2rem;
+}
+#conteudo{
+    padding-top: 2rem ;
+    margin-bottom: 60px;
+}
+#conteudo img{
+    border-radius: 50%;
+}
+#conteudo h2{
+    margin-top: 1rem;
+    color:var(--title-primary)
+}
+.caixa{
+    text-align: center;
+    padding: 1.6em 1em;
+}
+.btn-custom{
+    border: 1px solid rgb(42, 40, 40);
+    color: rgb(32, 30, 29);
+}
+.btn-custom:hover{
+    background: var(--text-color-hover);
+    color: var(--text-color-light);
+}
+
+
+/** rodape
+*------------------*/
+
+footer{
+    color: var(--text-color-light);
+    background: var(--bg-menu-footer);
+    padding: 2em 0;
+}
+footer p{
+    opacity: .7;
+}
+
+
+
+/* Media Query
+------------------------------*/
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+    #home{
+        padding-top: 90px ;
+        padding-bottom: 15px ;
+    }
+    .caixa-rodape{
+        text-align: center;
+    }
+    section#home .carousel-caption{
+        background: rgba(0, 0, 0, .7);
+        padding-top:0;
+   }
+    section#home .carousel-caption h4{
+        color: var(--text-color-light);
+        margin-top: 8px;
+    }
+   section#home .carousel-caption p{
+        font-size: 0.8rem;
+        text-align: left;
+        padding-left: 1.3rem;
+   } 
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+    #home{
+        padding-top: 90px ;
+        padding-bottom: 15px ;
+    }
+    .caixa-rodape{
+        text-align: center;
+        padding: 10px;
+    }
+   section#home .carousel-caption p{
+        font-size: 1rem;
+        text-align: justify;
+        padding: 0 1.3rem;
+   } 
+   section#home .carousel-caption{
+        font-size: 1.7rem;
+        text-align: center;
+        padding: 0;
+        background: rgba(0, 0, 0, .7);
+    } 
+    section#home .carousel-caption h4{
+        margin-top: 10px;
+    } 
+
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px){
+    #home{
+        padding-top: 90px ;
+        padding-bottom: 15px ;
+    }
+    #conteudo img{
+        width: 200px;
+    }
+    #conteudo h2{
+        text-align: center;
+    }
+    .caixa-rodape{
+        text-align: center;
+        padding: 10px;
+    }
+    section#home .carousel-caption p{
+        font-size: 1rem;
+        text-align: justify;
+        padding: 0 1.3rem;
+   } 
+   section#home .carousel-caption{
+        font-size: 1.7rem;
+        text-align: center;
+        padding: 0;
+        background: rgba(0, 0, 0, .7);
+    } 
+    section#home .carousel-caption h4{
+        margin-top: 10px;
+    } 
+    
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199.98px){
+    
+    #home,body,html{
+        height: 100%;
+    }
+    section .container div.carousel{
+        padding-top: 100px;
+    }
+    .caixa-rodape{
+        text-align: center;
+        padding: 10px;
+    }
+    section#home .carousel-caption p{
+        font-size: 1.3rem;
+        
+        padding: 0 1.3rem;
+   } 
+   section#home .carousel-caption{
+       
+        text-align: center;
+        padding: 0;
+        background: rgba(0, 0, 0, .7);
+    } 
+    section#home .carousel-caption h4{
+        font-size: 2.2rem;
+        margin-top: 10px;
+    } 
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px){
+    #home,body,html{
+        height: 100%;
+    }
+    section .container div.carousel{
+        padding-top: 80px;
+
+    }
+    .caixa-rodape{
+        text-align: center;
+        padding: 10px;
+    }
+    
+    section#home .carousel-caption p{
+        font-size: 1.3rem;
+        padding: 0 1.3rem;
+   } 
+   section#home .carousel-caption{
+    
+        text-align: center;
+        padding: 0;
+        background: rgba(0, 0, 0, .7);
+    } 
+    section#home .carousel-caption h4{
+        font-size: 2.2rem;
+        margin-top: 10px;
+    } 
+} 
