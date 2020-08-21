@@ -106,6 +106,9 @@ footer{
 footer p{
     opacity: .7;
 }
+footer .brasao-ufc img{
+    width: 180px;
+}
 
 
 
